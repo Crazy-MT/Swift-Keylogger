@@ -148,6 +148,18 @@ Outside:if pressed == 1
             }
             else
             {
+                if scancode == 101
+                {
+                    //let appPath = "/Applications/iTerm.app"
+                    //NSWorkspace.shared.openFile(appPath)
+                    
+                    let task = Process()
+                    task.launchPath = "/Users/mt/Desktop/test.sh"
+                    task.launch()
+                    task.waitUntilExit()
+                    
+                    break Outside
+                }
                 fh?.write(mySelf.keyMap[scancode]![0].data(using: .utf8)!)
             }
         }
