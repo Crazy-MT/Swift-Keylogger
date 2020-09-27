@@ -73,8 +73,10 @@ class Keylogger
         if ioreturn != kIOReturnSuccess
         {
             print("Can't open HID!")
+        } else {
+            print("init success")
         }
-
+        
     }
     
     @objc dynamic func activatedApp(notification: NSNotification)

