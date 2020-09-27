@@ -2,6 +2,9 @@
 
 [![Backers on Open Collective](https://opencollective.com/Swift-Keylogger/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/Swift-Keylogger/sponsors/badge.svg)](#sponsors) [![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg)]()
 
+
+[注意事项](注意事项.md)
+
 It is a simple and easy to use keylogger for macOS. It is not meant to be malicious. There are only few keyloggers available for Mac and none of them are in Swift.
 
 Another problem is with Apple high-level APIs. I don't know the reason but Apple suddenly deprecates and removes the documentation of APIs from its website.
@@ -9,6 +12,7 @@ Another problem is with Apple high-level APIs. I don't know the reason but Apple
 So, I don't want to keep checking about the availability of their APIs and changing my code frequently. That is the reason I went for low-level API which is using HID API.
 
 Most of the keyloggers available only log keystrokes into a file without much information about on which app the keystrokes are generated.
+
 
 
 ## Usage
