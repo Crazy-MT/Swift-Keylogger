@@ -2,6 +2,7 @@
 
 [![Backers on Open Collective](https://opencollective.com/Swift-Keylogger/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/Swift-Keylogger/sponsors/badge.svg)](#sponsors) [![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg)]()
 
+[此项目已废弃，请移步新项目](https://github.com/Crazy-MT/KeyboardShortcuts.git)
 
 [注意事项](注意事项.md)
 
